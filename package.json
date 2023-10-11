@@ -1,0 +1,17 @@
+{
+    "name": "front-end-template",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite --host",
+        "build": "vite build",
+        "preview": "vite preview --host"
+    },
+    "devDependencies": {
+        "@vituum/vite-plugin-nunjucks": "^0.1.3",
+        "sass": "^1.56.1",
+        "vite": "^3.2.3",
+        "vite-plugin-sass-glob-import": "^2.0.0"
+    }
+}

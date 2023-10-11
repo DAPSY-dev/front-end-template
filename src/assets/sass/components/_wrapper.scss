@@ -1,0 +1,10 @@
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - rem(32px));
+    max-width: rem(1600px);
+
+    // &--xxs {
+    //     max-width: rem(375px);
+    // }
+}

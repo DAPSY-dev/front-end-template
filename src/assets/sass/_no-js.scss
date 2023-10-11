@@ -1,0 +1,15 @@
+.no-js body {
+    font-size: 0;
+
+    &:before {
+        content: "You need JavaScript to run this app.";
+        display: block;
+        padding: 1rem;
+        font: inherit;
+        font-size: 1.5rem;
+    }
+
+    & > * {
+        display: none !important;
+    }
+}

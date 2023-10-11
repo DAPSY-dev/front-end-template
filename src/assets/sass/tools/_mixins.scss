@@ -1,0 +1,51 @@
+@mixin vh($property, $value) {
+    #{$property}: calc(var(--vh, 1vh) * #{$value});
+}
+
+// Example:
+// selector {
+//     @include vh(min-height, 100);
+// }
+
+// ---
+
+@mixin fluid-size($properties, $min-vw, $max-vw, $min-value, $max-value, $value-end: null) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-value);
+    $u4: unit($max-value);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        & {
+            @each $property in $properties {
+                #{$property}: $min-value $value-end;
+            }
+
+            @media screen and (min-width: $min-vw) {
+                @each $property in $properties {
+                    #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) $value-end;
+                }
+            }
+
+            @media screen and (min-width: $max-vw) {
+                @each $property in $properties {
+                    #{$property}: $max-value $value-end;
+                }
+            }
+        }
+    }
+}
+
+// Example:
+// selector {
+//     $_fs-min-width: 576px;
+//     $_fs-max-width: 1200px;
+//     $_fs-min-size: 24px;
+//     $_fs-max-size: 48px;
+//     @include fluid-size(font-size, $_fs-min-width, $_fs-max-width, $_fs-min-size, $_fs-max-size, !important);
+// }
+// ---
+// Example (shorthand):
+// selector {
+//     @include fluid-size(font-size, 576px, 1200px, 24px, 48px, !important);
+// }

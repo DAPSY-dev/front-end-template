@@ -1,0 +1,3 @@
+.heading {
+    @include fluid-size(font-size, 576px, 1200px, 24px, 48px);
+}

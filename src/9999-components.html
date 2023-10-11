@@ -1,0 +1,33 @@
+{% extends 'layout/base.html' %}
+{% block body %}
+<section>
+    <div class="wrapper">
+        <h1 class="heading">Heading</h1>
+    </div>
+</section>
+
+<section>
+    <div class="wrapper">
+        <h2>Aspect ratio</h2>
+        <picture class="picture" style="--aspect-ratio: 640 / 375; --max-width: 640px">
+            <img src="./assets/images/cat-1.jpg" alt="Cat" width="640" height="375" loading="lazy" />
+        </picture>
+    </div>
+</section>
+
+<section>
+    <div class="wrapper">
+        <br>
+        <h2>Loader demo</h2>
+        <script>
+            function loaderDemo() {
+                window.DAPSYdevApp.loader.show();
+                setTimeout(() => {
+                    window.DAPSYdevApp.loader.hide();
+                }, 3000);
+            }
+        </script>
+        <button type="button" onclick="loaderDemo()">Show loader</button>
+    </div>
+</section>
+{% endblock %}
