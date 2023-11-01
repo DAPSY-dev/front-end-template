@@ -1,7 +1,6 @@
 import path from "path";
 import nunjucks from "@vituum/vite-plugin-nunjucks";
 import sassGlobImports from "vite-plugin-sass-glob-import";
-// import { viteStaticCopy } from "vite-plugin-static-copy";
 import * as njkData from "./src/config/data.njk.json";
 
 const root = path.resolve(__dirname, "src");
@@ -14,6 +13,7 @@ for (const page of njkData.pages) {
 }
 
 export default {
+    base: "./",
     root: root,
     build: {
         outDir: outDir,
@@ -22,6 +22,11 @@ export default {
             input: {
                 index: path.resolve(root, "index.html"),
                 ...pages,
+            },
+            output: {
+                entryFileNames: "assets/js/[name].js",
+                chunkFileNames: "assets/js/[name].js",
+                assetFileNames: "assets/[ext]/[name].[ext]",
             },
         },
     },
@@ -34,17 +39,5 @@ export default {
             },
         }),
         sassGlobImports(),
-        // viteStaticCopy({
-        //     targets: [
-        //         {
-        //             src: "./config/robots.txt",
-        //             dest: "./",
-        //         },
-        //         {
-        //             src: "./config/sitemap.xml",
-        //             dest: "./",
-        //         },
-        //     ],
-        // }),
     ],
 };

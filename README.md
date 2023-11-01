@@ -1,5 +1,7 @@
 # Front-End Template
 
+## Scripts
+
 **Install**
 ```cmd
 npm install
@@ -19,3 +21,8 @@ npm run build
 ```cmd
 npm run preview
 ```
+
+## Assets
+
+In **"src/assets"** put only **CSS** and **JS** files. <br />
+Other assets (*fonts, images...*) go in **"src/public/assets"**.
