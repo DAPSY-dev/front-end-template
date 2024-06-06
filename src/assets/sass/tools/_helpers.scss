@@ -1,4 +1,4 @@
-@mixin generateSpacing($name, $size) {
+@mixin _generateSpacing($name, $size) {
     .st-#{$name} {
         @if length($size) == 1 {
             padding-top: nth($size, 1) !important;
@@ -27,17 +27,17 @@
 }
 
 // Example:
-// @include generateSpacing("701", (rem(96px) rem(72px) rem(48px)));
+// @include _generateSpacing("701", (rem(96px) rem(72px) rem(48px)));
 
-@include generateSpacing("0", (0rem));
-@include generateSpacing("50", (rem(12px)));
-@include generateSpacing("100", (rem(16px)));
-@include generateSpacing("200", (rem(24px)));
-@include generateSpacing("300", (rem(32px)));
-@include generateSpacing("400", (rem(48px)));
-@include generateSpacing("500", (rem(64px)));
-@include generateSpacing("600", (rem(72px)));
-@include generateSpacing("700", (rem(96px)));
+@include _generateSpacing("0", (0rem));
+@include _generateSpacing("50", (rem(12px)));
+@include _generateSpacing("100", (rem(16px)));
+@include _generateSpacing("200", (rem(24px)));
+@include _generateSpacing("300", (rem(32px)));
+@include _generateSpacing("400", (rem(48px)));
+@include _generateSpacing("500", (rem(64px)));
+@include _generateSpacing("600", (rem(72px)));
+@include _generateSpacing("700", (rem(96px)));
 
 .mx-auto {
     margin-left: auto !important;

@@ -1,6 +1,6 @@
 $base-font-size: 16px;
 
-@mixin generateColor($name, $hex, $set-rgb: false) {
+@mixin _generateColor($name, $hex, $set-rgb: false) {
     --color-#{$name}: #{$hex};
 
     @if $set-rgb == true {
@@ -9,15 +9,15 @@ $base-font-size: 16px;
 }
 
 :root {
-    @include generateColor("black", #000000, true);
-    @include generateColor("white", #ffffff, true);
+    @include _generateColor("black", #000000, true);
+    @include _generateColor("white", #ffffff, true);
 
-    @include generateColor("dark", #272727);
-    @include generateColor("light", #f7f7f7);
+    @include _generateColor("dark", #272727);
+    @include _generateColor("light", #f7f7f7);
 
-    @include generateColor("primary", #26a69a);
-    @include generateColor("secondary", #00766c);
-    @include generateColor("tertiary", #64d8cb);
+    @include _generateColor("primary", #26a69a);
+    @include _generateColor("secondary", #00766c);
+    @include _generateColor("tertiary", #64d8cb);
 
     // --font-primary: "font name", sans-serif;
 }
