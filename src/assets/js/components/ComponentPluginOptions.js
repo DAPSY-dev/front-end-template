@@ -1,6 +1,6 @@
 // export const COMPONENT_DEFAULTS = {};
 
-// export const componentOptions = (type, element) => {
+// export function componentOptions(type, element) {
 //     console.log(element);
 
 //     switch (type) {
