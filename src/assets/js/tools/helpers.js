@@ -1,4 +1,4 @@
-export const debounce = (callback, delay = 250) => {
+export function debounce(callback, delay = 250) {
     let timeout = null;
 
     return (...args) => {
@@ -7,7 +7,7 @@ export const debounce = (callback, delay = 250) => {
     };
 };
 
-export const throttle = (callback, delay = 250) => {
+export function throttle(callback, delay = 250) {
     let shouldWait = false;
     let waitingArgs = null;
 

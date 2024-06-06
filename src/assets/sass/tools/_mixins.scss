@@ -7,8 +7,6 @@
 //     @include vh(min-height, 100);
 // }
 
-// ---
-
 @mixin fluid-size($properties, $min-vw, $max-vw, $min-value, $max-value, $value-end: null) {
     $u1: unit($min-vw);
     $u2: unit($max-vw);
@@ -44,7 +42,7 @@
 //     $_fs-max-size: 48px;
 //     @include fluid-size(font-size, $_fs-min-width, $_fs-max-width, $_fs-min-size, $_fs-max-size, !important);
 // }
-// ---
+//
 // Example (shorthand):
 // selector {
 //     @include fluid-size(font-size, 576px, 1200px, 24px, 48px, !important);

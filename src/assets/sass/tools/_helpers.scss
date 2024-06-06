@@ -1,45 +1,43 @@
-// $spacing: (
-//     // "name": (size_desktop size_tablet size_mobile),
-//     // Example - "701": (rem(96px) rem(72px) rem(48px)),
-//     //
-//     // "0": (0rem),
-//     // "50": (rem(12px)),
-//     // "100": (rem(16px)),
-//     // "200": (rem(24px)),
-//     // "300": (rem(32px)),
-//     // "400": (rem(48px)),
-//     // "500": (rem(64px)),
-//     // "600": (rem(72px)),
-//     // "700": (rem(96px))
-// );
+@mixin generateSpacing($name, $size) {
+    .st-#{$name} {
+        @if length($size) == 1 {
+            padding-top: nth($size, 1) !important;
+        }
 
-// @each $name, $size in $spacing {
-//     .st-#{$name} {
-//         @if length($size) == 1 {
-//             padding-top: nth($size, 1) !important;
-//         }
+        @if length($size) == 2 {
+            padding-top: nth($size, 2) !important;
 
-//         @if length($size) == 2 {
-//             padding-top: nth($size, 2) !important;
+            @media (min-width: rem(1024px)) {
+                padding-top: nth($size, 1) !important;
+            }
+        }
 
-//             @media (min-width: rem(1024px)) {
-//                 padding-top: nth($size, 1) !important;
-//             }
-//         }
+        @if length($size) == 3 {
+            padding-top: nth($size, 3) !important;
 
-//         @if length($size) == 3 {
-//             padding-top: nth($size, 3) !important;
+            @media (min-width: rem(1024px)) {
+                padding-top: nth($size, 2) !important;
+            }
 
-//             @media (min-width: rem(1024px)) {
-//                 padding-top: nth($size, 2) !important;
-//             }
+            @media (min-width: rem(1440px)) {
+                padding-top: nth($size, 1) !important;
+            }
+        }
+    }
+}
 
-//             @media (min-width: rem(1440px)) {
-//                 padding-top: nth($size, 1) !important;
-//             }
-//         }
-//     }
-// }
+// Example:
+// @include generateSpacing("701", (rem(96px) rem(72px) rem(48px)));
+
+@include generateSpacing("0", (0rem));
+@include generateSpacing("50", (rem(12px)));
+@include generateSpacing("100", (rem(16px)));
+@include generateSpacing("200", (rem(24px)));
+@include generateSpacing("300", (rem(32px)));
+@include generateSpacing("400", (rem(48px)));
+@include generateSpacing("500", (rem(64px)));
+@include generateSpacing("600", (rem(72px)));
+@include generateSpacing("700", (rem(96px)));
 
 .mx-auto {
     margin-left: auto !important;

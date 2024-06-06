@@ -1,30 +1,23 @@
-// ========
-// SCSS
-// ========
-//
-// fonts
-//
 $base-font-size: 16px;
 
-// ========
-// CSS
-// ========
+@mixin generateColor($name, $hex, $set-rgb: false) {
+    --color-#{$name}: #{$hex};
+
+    @if $set-rgb == true {
+        --color-rgb-#{$name}: #{red($hex)}, #{green($hex)}, #{blue($hex)};
+    }
+}
+
 :root {
-    //
-    // colors
-    //
-    --color-black: #000000;
-    --color-white: #ffffff;
+    @include generateColor("black", #000000, true);
+    @include generateColor("white", #ffffff, true);
 
-    --color-dark: #272727;
-    --color-light: #f7f7f7;
+    @include generateColor("dark", #272727);
+    @include generateColor("light", #f7f7f7);
 
-    --color-primary: #26a69a;
-    --color-secondary: #00766c;
-    --color-tertiary: #64d8cb;
+    @include generateColor("primary", #26a69a);
+    @include generateColor("secondary", #00766c);
+    @include generateColor("tertiary", #64d8cb);
 
-    //
-    // fonts
-    //
     // --font-primary: "font name", sans-serif;
 }
