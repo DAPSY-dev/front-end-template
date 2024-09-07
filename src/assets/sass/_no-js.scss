@@ -1,12 +1,17 @@
 .no-js body {
-    font-size: 0;
+    font-size: 0 !important;
 
     &:before {
         content: "You need JavaScript to run this app.";
+        position: relative;
         display: block;
         padding: 1rem;
-        font: inherit;
+        font-family: sans-serif;
         font-size: 1.5rem;
+        line-height: 1.5;
+        color: rgb(0 0 0);
+        background-color: rgb(255 255 255);
+        z-index: 1;
     }
 
     & > * {

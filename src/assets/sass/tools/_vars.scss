@@ -15,5 +15,5 @@ $base-font-size: 16px;
     @include _generateColor("secondary", #00766c);
     @include _generateColor("tertiary", #64d8cb);
 
-    // --font-primary: "font name", sans-serif;
+    --font-primary: sans-serif;
 }

@@ -17,7 +17,7 @@
     background-color: rgb(var(--color-black) / 0.9);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 300ms ease, visibility 300ms ease;
     z-index: 9999999;
 
     &.is-showing {
@@ -39,6 +39,6 @@
     }
 
     &.is-showing::after {
-        animation: loader 1s linear infinite;
+        animation: loader 1000ms linear infinite;
     }
 }
