@@ -5,7 +5,7 @@ export function debounce(callback, delay = 250) {
         clearTimeout(timeout);
         timeout = setTimeout(() => void callback(...args), delay);
     };
-};
+}
 
 export function throttle(callback, delay = 250) {
     let shouldWait = false;
@@ -32,4 +32,4 @@ export function throttle(callback, delay = 250) {
         setTimeout(timeoutFunc, delay);
         shouldWait = true;
     };
-};
+}

@@ -19,10 +19,7 @@
         <div class="container">
             {% include 'partials/header.html' %}
 
-            <main class="site-main">
-              {% block body %}
-              {% endblock %}
-            </main>
+            <main class="site-main">{% block body %} {% endblock %}</main>
 
             {% include 'partials/footer.html' %}
         </div>

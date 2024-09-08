@@ -1,3 +1,14 @@
-body {
+html {
+    min-width: rem(320px);
     font-family: var(--font-primary);
+}
+
+table {
+    border-collapse: collapse;
+
+    & th,
+    & td {
+        padding: rem(8px) rem(16px);
+        border: rem(1px) solid rgb(var(--color-black));
+    }
 }

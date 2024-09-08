@@ -1,5 +1,4 @@
-{% extends 'layout/base.html' %}
-{% block body %}
+{% extends 'layout/base.html' %} {% block body %}
 <div class="wrapper">
     <h1>Heading 1</h1>
     <h2>Heading 2</h2>
@@ -39,5 +38,38 @@
             </ol>
         </li>
     </ol>
+
+    <div style="overflow: auto">
+        <table>
+            <thead>
+                <tr>
+                    <th>Head 1</th>
+                    <th>Head 2</th>
+                    <th>Head 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data 1/1</td>
+                    <td>Data 1/2</td>
+                    <td>Data 1/3</td>
+                </tr>
+                <tr>
+                    <td>Data 2/1</td>
+                    <td>Data 2/2</td>
+                    <td>Data 2/3</td>
+                </tr>
+                <tr>
+                    <td>Data 3/1</td>
+                    <td>Data 3/2</td>
+                    <td>Data 3/3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>Paragraph with some text.</p>
+    <img src="./assets/images/cat-1.jpg" alt="Cat" width="640" height="375" loading="lazy" />
+    <p>Paragraph with another text.</p>
 </div>
 {% endblock %}

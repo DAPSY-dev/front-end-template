@@ -2,27 +2,15 @@
 
 ## Scripts
 
-**Install**
-```cmd
-npm install
-```
+Install: `npm install`
 
-**Run**
-```cmd
-npm run dev
-```
+Run: `npm run dev`
 
-**Build**
-```cmd
-npm run build
-```
+Build: `npm run build`
 
-**Preview**
-```cmd
-npm run preview
-```
+Preview: `npm run preview`
 
 ## Assets
 
 In **"src/assets"** put only **CSS** and **JS** files. <br />
-Other assets (*fonts, images...*) go in **"src/public/assets"**.
+Other assets (_fonts, images..._) go in **"src/public/assets"**.
