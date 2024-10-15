@@ -1,6 +1,5 @@
 import path from "path";
 import nunjucks from "@vituum/vite-plugin-nunjucks";
-import sassGlobImports from "vite-plugin-sass-glob-import";
 import * as njkData from "./src/config/data.njk.json";
 
 const root = path.resolve(__dirname, "src");
@@ -38,6 +37,5 @@ export default {
                 json: /.(json.njk.html)$/,
             },
         }),
-        sassGlobImports(),
     ],
 };

@@ -1,10 +1,17 @@
+@use "../tools/functions" as f;
+
 .wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(100% - rem(32px));
-    max-width: rem(1600px);
+    --_inline-spacing: #{f.rem(16px)};
+    --_max-width: #{f.rem(1600px)};
+
+    margin-inline: auto;
+    width: min(calc(100% - calc(var(--_inline-spacing) * 2)), var(--_max-width));
+
+    // &--fluid {
+    //     --_inline-spacing: #{f.rem(0px)};
+    // }
 
     // &--xxs {
-    //     max-width: rem(375px);
+    //     --_max-width: #{f.rem(375px)};
     // }
 }

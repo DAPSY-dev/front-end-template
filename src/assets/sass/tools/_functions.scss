@@ -1,13 +1,14 @@
 @use "sass:math";
+@use "vars" as vars;
 
 @function strip-unit($value) {
     @return math.div($value, ($value * 0 + 1));
 }
 
-@function rem($size, $font-size: $base-font-size) {
+@function rem($size, $font-size: vars.$base-font-size) {
     @return math.div($size, $font-size) * 1rem;
 }
 
-@function em($size, $font-size: $base-font-size) {
+@function em($size, $font-size: vars.$base-font-size) {
     @return math.div($size, $font-size) * 1em;
 }

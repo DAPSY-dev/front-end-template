@@ -1,5 +1,7 @@
+@use "../tools/mixins" as mixins;
+
 .container {
     display: flex;
     flex-direction: column;
-    @include vh(min-height, 100);
+    @include mixins.vh(min-height, 100);
 }

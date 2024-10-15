@@ -1,3 +1,6 @@
+@use "../tools/functions" as f;
+@use "../tools/mixins" as mixins;
+
 .heading {
-    @include fluid-size(font-size, rem(576px), rem(1200px), rem(24px), rem(48px));
+    @include mixins.fluid-size(font-size, f.rem(576px), f.rem(1200px), f.rem(24px), f.rem(48px));
 }

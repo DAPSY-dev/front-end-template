@@ -1,0 +1,66 @@
+@use "../tools/functions" as f;
+
+@mixin _generate-spacing($name, $size) {
+    .pbs-#{$name} {
+        @if length($size) == 1 {
+            padding-block-start: nth($size, 1) !important;
+        }
+
+        @if length($size) == 2 {
+            padding-block-start: nth($size, 2) !important;
+
+            @media (min-width: f.rem(1024px)) {
+                padding-block-start: nth($size, 1) !important;
+            }
+        }
+
+        @if length($size) == 3 {
+            padding-block-start: nth($size, 3) !important;
+
+            @media (min-width: f.rem(1024px)) {
+                padding-block-start: nth($size, 2) !important;
+            }
+
+            @media (min-width: f.rem(1440px)) {
+                padding-block-start: nth($size, 1) !important;
+            }
+        }
+    }
+}
+
+// Example:
+// @include _generate-spacing("701", (f.rem(96px) f.rem(72px) f.rem(48px)));
+
+@include _generate-spacing("0", (f.rem(0px)));
+@include _generate-spacing("50", (f.rem(12px)));
+@include _generate-spacing("100", (f.rem(16px)));
+@include _generate-spacing("200", (f.rem(24px)));
+@include _generate-spacing("300", (f.rem(32px)));
+@include _generate-spacing("400", (f.rem(48px)));
+@include _generate-spacing("500", (f.rem(64px)));
+@include _generate-spacing("600", (f.rem(72px)));
+@include _generate-spacing("700", (f.rem(96px)));
+
+.mi-auto {
+    margin-inline: auto !important;
+}
+
+.mis-auto {
+    margin-inline-start: auto !important;
+}
+
+.mie-auto {
+    margin-inline-end: auto !important;
+}
+
+.clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.no-overflow {
+    overflow: hidden !important;
+}

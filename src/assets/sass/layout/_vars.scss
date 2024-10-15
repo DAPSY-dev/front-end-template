@@ -1,0 +1,17 @@
+@mixin _generate-color($name, $hex) {
+    --color-#{$name}: #{red($hex)} #{green($hex)} #{blue($hex)};
+}
+
+:root {
+    @include _generate-color("black", #000000);
+    @include _generate-color("white", #ffffff);
+
+    @include _generate-color("dark", #272727);
+    @include _generate-color("light", #f7f7f7);
+
+    @include _generate-color("primary", #26a69a);
+    @include _generate-color("secondary", #00766c);
+    @include _generate-color("tertiary", #64d8cb);
+
+    --font-primary: sans-serif;
+}

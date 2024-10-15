@@ -1,3 +1,5 @@
+@use "../tools/functions" as f;
+
 @keyframes loader {
     0% {
         transform: rotate(0deg);
@@ -10,8 +12,8 @@
 
 .loader {
     position: fixed;
-    top: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     width: 100%;
     height: 100%;
     background-color: rgb(var(--color-black) / 0.9);
@@ -29,12 +31,12 @@
         content: "";
         display: block;
         position: absolute;
-        top: calc(50% - rem(24px));
-        left: calc(50% - rem(24px));
-        width: rem(48px);
-        height: rem(48px);
-        border: rem(4px) solid rgb(var(--color-white) / 0.25);
-        border-top-color: rgb(var(--color-white));
+        inset-block-start: calc(50% - f.rem(24px));
+        inset-inline-start: calc(50% - f.rem(24px));
+        width: f.rem(48px);
+        height: f.rem(48px);
+        border: f.rem(4px) solid rgb(var(--color-white) / 0.25);
+        border-block-start-color: rgb(var(--color-white));
         border-radius: 50%;
     }
 

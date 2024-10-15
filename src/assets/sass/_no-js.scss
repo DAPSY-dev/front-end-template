@@ -1,7 +1,7 @@
 .no-js body {
     font-size: 0 !important;
 
-    &:before {
+    &::before {
         content: "You need JavaScript to run this app.";
         position: relative;
         display: block;

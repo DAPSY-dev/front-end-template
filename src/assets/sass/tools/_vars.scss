@@ -1,19 +1,1 @@
 $base-font-size: 16px;
-
-@mixin _generateColor($name, $hex) {
-    --color-#{$name}: #{red($hex)} #{green($hex)} #{blue($hex)};
-}
-
-:root {
-    @include _generateColor("black", #000000);
-    @include _generateColor("white", #ffffff);
-
-    @include _generateColor("dark", #272727);
-    @include _generateColor("light", #f7f7f7);
-
-    @include _generateColor("primary", #26a69a);
-    @include _generateColor("secondary", #00766c);
-    @include _generateColor("tertiary", #64d8cb);
-
-    --font-primary: sans-serif;
-}

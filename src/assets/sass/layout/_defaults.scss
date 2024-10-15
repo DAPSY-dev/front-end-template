@@ -1,5 +1,7 @@
+@use "../tools/functions" as f;
+
 html {
-    min-width: rem(320px);
+    min-width: f.rem(320px);
     font-family: var(--font-primary);
 }
 
@@ -8,7 +10,7 @@ table {
 
     & th,
     & td {
-        padding: rem(8px) rem(16px);
-        border: rem(1px) solid rgb(var(--color-black));
+        padding: f.rem(8px) f.rem(16px);
+        border: f.rem(1px) solid rgb(var(--color-black));
     }
 }
