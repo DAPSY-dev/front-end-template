@@ -1,4 +1,5 @@
 @use "functions" as f;
+@use "vars" as vars;
 
 @mixin vh($property, $value) {
     #{$property}: calc(var(--vh, 1vh) * #{$value});
@@ -53,4 +54,71 @@
 // Example (shorthand):
 // selector {
 //     @include fluid-size(font-size, 576px, 1200px, 24px, 48px, !important);
+// }
+
+@mixin hover {
+    @media (hover: hover) and (pointer: fine) {
+        @content;
+    }
+}
+
+// Example:
+// selector {
+//     @include hover {
+//         &:hover {
+//             outline: 2px solid black;
+//         }
+//     }
+// }
+
+@mixin media-sm {
+    @media screen and (min-width: vars.$viewport-sm) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width: vars.$viewport-md) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: vars.$viewport-lg) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: vars.$viewport-xl) {
+        @content;
+    }
+}
+
+@mixin media-xxl {
+    @media screen and (min-width: vars.$viewport-xxl) {
+        @content;
+    }
+}
+
+// Example:
+// selector {
+//     font-size: 24px;
+//     @include media-xl {
+//         font-size: 48px;
+//     }
+// }
+
+@mixin rtl {
+    [dir="rtl"] & {
+        @content;
+    }
+}
+
+// Example:
+// selector {
+//     float: left;
+//     @include rtl {
+//         float: right;
+//     }
 // }

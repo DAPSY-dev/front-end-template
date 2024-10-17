@@ -1,6 +1,7 @@
 @use "../tools/functions" as f;
 @use "../tools/mixins" as mixins;
+@use "../tools/vars" as vars;
 
 .heading {
-    @include mixins.fluid-size(font-size, f.rem(576px), f.rem(1200px), f.rem(24px), f.rem(48px));
+    @include mixins.fluid-size(font-size, vars.$viewport-sm, vars.$viewport-xl, f.rem(24px), f.rem(48px));
 }

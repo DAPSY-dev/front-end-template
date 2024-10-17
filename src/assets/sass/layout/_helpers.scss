@@ -1,4 +1,5 @@
 @use "../tools/functions" as f;
+@use "../tools/mixins" as mixins;
 
 @mixin _generate-spacing($name, $size) {
     .pbs-#{$name} {
@@ -9,7 +10,7 @@
         @if length($size) == 2 {
             padding-block-start: nth($size, 2) !important;
 
-            @media (min-width: f.rem(1024px)) {
+            @include mixins.media-lg {
                 padding-block-start: nth($size, 1) !important;
             }
         }
@@ -17,11 +18,11 @@
         @if length($size) == 3 {
             padding-block-start: nth($size, 3) !important;
 
-            @media (min-width: f.rem(1024px)) {
+            @include mixins.media-lg {
                 padding-block-start: nth($size, 2) !important;
             }
 
-            @media (min-width: f.rem(1440px)) {
+            @include mixins.media-xxl {
                 padding-block-start: nth($size, 1) !important;
             }
         }

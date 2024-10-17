@@ -1,4 +1,5 @@
 @use "../tools/functions" as f;
+@use "../tools/mixins" as mixins;
 
 .grid {
     display: grid;
@@ -12,28 +13,28 @@
     }
 
     &--2 {
-        @media (min-width: f.rem(640px)) {
+        @include mixins.media-sm {
             grid-template-columns: repeat(2, 1fr);
         }
     }
 
     &--3 {
-        @media (min-width: f.rem(640px)) {
+        @include mixins.media-sm {
             grid-template-columns: repeat(2, 1fr);
         }
-        @media (min-width: f.rem(1024px)) {
+        @include mixins.media-lg {
             grid-template-columns: repeat(3, 1fr);
         }
     }
 
     &--4 {
-        @media (min-width: f.rem(640px)) {
+        @include mixins.media-sm {
             grid-template-columns: repeat(2, 1fr);
         }
-        @media (min-width: f.rem(1024px)) {
+        @include mixins.media-lg {
             grid-template-columns: repeat(3, 1fr);
         }
-        @media (min-width: f.rem(1440px)) {
+        @include mixins.media-xxl {
             grid-template-columns: repeat(4, 1fr);
         }
     }
