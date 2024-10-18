@@ -10,7 +10,7 @@
         @if length($size) == 2 {
             padding-block-start: nth($size, 2) !important;
 
-            @include mixins.media-lg {
+            @include mixins.screen-lg {
                 padding-block-start: nth($size, 1) !important;
             }
         }
@@ -18,11 +18,11 @@
         @if length($size) == 3 {
             padding-block-start: nth($size, 3) !important;
 
-            @include mixins.media-lg {
+            @include mixins.screen-lg {
                 padding-block-start: nth($size, 2) !important;
             }
 
-            @include mixins.media-xxl {
+            @include mixins.screen-xxl {
                 padding-block-start: nth($size, 1) !important;
             }
         }

@@ -13,28 +13,28 @@
     }
 
     &--2 {
-        @include mixins.media-sm {
+        @include mixins.screen-sm {
             grid-template-columns: repeat(2, 1fr);
         }
     }
 
     &--3 {
-        @include mixins.media-sm {
+        @include mixins.screen-sm {
             grid-template-columns: repeat(2, 1fr);
         }
-        @include mixins.media-lg {
+        @include mixins.screen-lg {
             grid-template-columns: repeat(3, 1fr);
         }
     }
 
     &--4 {
-        @include mixins.media-sm {
+        @include mixins.screen-sm {
             grid-template-columns: repeat(2, 1fr);
         }
-        @include mixins.media-lg {
+        @include mixins.screen-lg {
             grid-template-columns: repeat(3, 1fr);
         }
-        @include mixins.media-xxl {
+        @include mixins.screen-xxl {
             grid-template-columns: repeat(4, 1fr);
         }
     }

@@ -71,31 +71,31 @@
 //     }
 // }
 
-@mixin media-sm {
+@mixin screen-sm {
     @media screen and (min-width: vars.$viewport-sm) {
         @content;
     }
 }
 
-@mixin media-md {
+@mixin screen-md {
     @media screen and (min-width: vars.$viewport-md) {
         @content;
     }
 }
 
-@mixin media-lg {
+@mixin screen-lg {
     @media screen and (min-width: vars.$viewport-lg) {
         @content;
     }
 }
 
-@mixin media-xl {
+@mixin screen-xl {
     @media screen and (min-width: vars.$viewport-xl) {
         @content;
     }
 }
 
-@mixin media-xxl {
+@mixin screen-xxl {
     @media screen and (min-width: vars.$viewport-xxl) {
         @content;
     }
@@ -104,7 +104,7 @@
 // Example:
 // selector {
 //     font-size: 24px;
-//     @include media-xl {
+//     @include screen-xl {
 //         font-size: 48px;
 //     }
 // }
