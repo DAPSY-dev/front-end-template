@@ -3,7 +3,7 @@
     aspect-ratio: var(--aspect-ratio, 16 / 9);
     max-width: var(--max-width, 100%);
 
-    img {
+    & img {
         position: absolute;
         inset-block-start: 0;
         inset-inline-start: 0;
