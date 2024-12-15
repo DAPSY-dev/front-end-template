@@ -1,9 +1,5 @@
 @use "../tools/functions" as f;
 
-:root {
-    color-scheme: only light;
-}
-
 html {
     min-width: f.rem(320px);
     font-family: var(--font-primary);
