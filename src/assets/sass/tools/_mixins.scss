@@ -122,3 +122,17 @@
 //         float: right;
 //     }
 // }
+
+@mixin reduced-motion {
+    @media (prefers-reduced-motion: reduce) {
+        @content;
+    }
+}
+
+// Example:
+// selector {
+//     @include reduced-motion {
+//         transition: none;
+//         animation: none;
+//     }
+// }

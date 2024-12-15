@@ -1,4 +1,5 @@
 @use "../tools/functions" as f;
+@use "../tools/mixins" as mixins;
 
 @keyframes loader {
     0% {
@@ -22,6 +23,10 @@
     transition: opacity 300ms ease, visibility 300ms ease;
     z-index: 9999999;
 
+    @include mixins.reduced-motion {
+        transition: none;
+    }
+
     &.is-showing {
         opacity: 1;
         visibility: visible;
@@ -42,5 +47,9 @@
 
     &.is-showing::after {
         animation: loader 1000ms linear infinite;
+
+        @include mixins.reduced-motion {
+            animation-duration: 5000ms;
+        }
     }
 }
