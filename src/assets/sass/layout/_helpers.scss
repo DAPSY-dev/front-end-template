@@ -4,26 +4,26 @@
 @mixin _generate-spacing($name, $size) {
     .pbs-#{$name} {
         @if length($size) == 1 {
-            padding-block-start: nth($size, 1) !important;
+            padding-block-start: nth($size, 1);
         }
 
         @if length($size) == 2 {
-            padding-block-start: nth($size, 2) !important;
+            padding-block-start: nth($size, 2);
 
             @include mixins.screen-lg {
-                padding-block-start: nth($size, 1) !important;
+                padding-block-start: nth($size, 1);
             }
         }
 
         @if length($size) == 3 {
-            padding-block-start: nth($size, 3) !important;
+            padding-block-start: nth($size, 3);
 
             @include mixins.screen-lg {
-                padding-block-start: nth($size, 2) !important;
+                padding-block-start: nth($size, 2);
             }
 
             @include mixins.screen-xxl {
-                padding-block-start: nth($size, 1) !important;
+                padding-block-start: nth($size, 1);
             }
         }
     }
@@ -43,15 +43,19 @@
 @include _generate-spacing("700", (f.rem(96px)));
 
 .mi-auto {
-    margin-inline: auto !important;
+    margin-inline: auto;
 }
 
 .mis-auto {
-    margin-inline-start: auto !important;
+    margin-inline-start: auto;
 }
 
 .mie-auto {
-    margin-inline-end: auto !important;
+    margin-inline-end: auto;
+}
+
+.no-overflow {
+    overflow: hidden;
 }
 
 .clearfix {
@@ -60,8 +64,4 @@
         display: table;
         clear: both;
     }
-}
-
-.no-overflow {
-    overflow: hidden !important;
 }

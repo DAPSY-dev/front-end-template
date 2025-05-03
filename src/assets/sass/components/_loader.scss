@@ -21,7 +21,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 300ms ease, visibility 300ms ease;
-    z-index: 9999999;
+    z-index: 1;
 
     @include mixins.reduced-motion {
         transition: none;

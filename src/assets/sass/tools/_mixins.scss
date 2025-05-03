@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "functions" as f;
 @use "vars" as vars;
 
@@ -11,10 +12,10 @@
 // }
 
 @mixin fluid-size($properties, $min-vw, $max-vw, $min-value, $max-value, $value-end: null) {
-    $u1: unit($min-vw);
-    $u2: unit($max-vw);
-    $u3: unit($min-value);
-    $u4: unit($max-value);
+    $u1: math.div($min-vw, f.strip-unit($min-vw));
+    $u2: math.div($max-vw, f.strip-unit($max-vw));
+    $u3: math.div($min-value, f.strip-unit($min-value));
+    $u4: math.div($max-value, f.strip-unit($max-value));
 
     @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
         & {
