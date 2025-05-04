@@ -12,7 +12,6 @@ for (const page of njkData.pages) {
 }
 
 export default {
-    base: "./",
     root: root,
     build: {
         outDir: outDir,

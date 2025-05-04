@@ -7,17 +7,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Website description." />
         <meta name="keywords" content="Website, Keywords" />
+        <meta name="apple-mobile-web-app-title" content="WebsiteTitle" />
 
-        <link rel="icon" type="image/svg+xml" href="./assets/images/favicon/favicon.svg" />
-        <link rel="stylesheet" href="./assets/sass/main.scss" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon/favicon-96x96.png" />
+        <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="stylesheet" href="/assets/sass/main.scss" />
 
         <script>
             document.documentElement.classList.remove("no-js");
         </script>
-        <script type="module" src="./assets/js/main.js"></script>
+        <script type="module" src="/assets/js/main.js"></script>
     </head>
 
-    <body data-no-js-text="You need JavaScript to run this app.">
+    <body>
         <div class="container">
             {% include 'partials/header.html' %}
 
