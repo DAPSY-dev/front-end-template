@@ -2,7 +2,7 @@
 
 ## Installation prerequisites
 
--   Node.js: `v20.18.0`;
+-   Node.js: **v20.18.0**;
 
 ## Scripts
 
