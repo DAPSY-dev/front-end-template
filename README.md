@@ -1,5 +1,9 @@
 # Front-End Template
 
+## Installation prerequisites
+
+-   Node.js: `v20.18.0`;
+
 ## Scripts
 
 Install:
@@ -36,7 +40,8 @@ npm run faviconCheck
 
 ## Assets
 
-In **"src/assets"** put only **CSS** and **JS** files. <br />
+In **"src/assets"** put only **CSS** and **JS** files.
+
 Other assets (_fonts, images..._) go in **"src/public/assets"**.
 
 ## Libraries and tools notes
