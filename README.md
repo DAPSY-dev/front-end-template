@@ -2,37 +2,37 @@
 
 ## Installation prerequisites
 
--   Node.js: `v20.18.0`;
+-   Node.js: `v20.18.0`
 
 ## Scripts
 
-Install:
+Install
 
 ```sh
 npm install
 ```
 
-Run:
+Run
 
 ```sh
 npm run dev
 ```
 
-Build:
+Build
 
 ```sh
 npm run build
 ```
 
-Preview:
+Preview
 
 ```sh
 npm run preview
 ```
 
-Favicon check:
+Favicon check
 
--   Start dev or build and preview before running favicon check;
+> Start dev or build and preview before running favicon check
 
 ```sh
 npm run faviconCheck
@@ -46,4 +46,4 @@ Other assets (_fonts, images..._) go in `src/public/assets`.
 
 ## Libraries and tools notes
 
--   Favicon (Web App Manifest) generator: [RealFaviconGenerator](https://realfavicongenerator.net);
+-   Favicon (Web App Manifest) generator: [RealFaviconGenerator](https://realfavicongenerator.net)
