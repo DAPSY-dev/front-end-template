@@ -40,9 +40,9 @@ npm run faviconCheck
 
 ## Assets
 
-In `src/assets` put only **CSS** and **JS** files
+-   `src/assets` - **CSS** and **JS** files
 
-Other assets (_fonts, images..._) go in `src/public/assets`
+-   `src/public/assets` - Other assets (_fonts, images..._)
 
 ## Libraries and tools notes
 
